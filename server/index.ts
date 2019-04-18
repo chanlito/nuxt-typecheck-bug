@@ -6,7 +6,10 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = express();
 
 const nuxt = new Nuxt({
-  dev
+  dev,
+  _typescript: {
+    build: true
+  }
 });
 
 nuxt.ready().then(() => {
